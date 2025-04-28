@@ -24,8 +24,33 @@ docs/releases/Hotfix-Documentation-Best-Practices.md
 
 INTERNAL NOTE
 -->
+## Flutter 3.29 Changes
 
-## Flutter 3.29.1 Changes
+### [3.29.3](https://github.com/flutter/flutter/releases/tag/3.29.3)
+- [flutter/165818](https://github.com/flutter/flutter/pull/165818) - Unset `GIT_DIR` to enable flutter tool calls in githooks.
+- [flutter/163421](https://github.com/flutter/flutter/issues/163421) - Impeller,
+  Android, Fixes Android Emulator crash when navigating to routes with backdrop
+  blurs.
+- [flutter/165166](https://github.com/flutter/flutter/pull/165166) - Impeller, All platforms, Text that is scaled over 48x renders incorrectly.
+- [flutter/163627](https://github.com/flutter/flutter/pull/163627) - Fix issue where placeholder types in ARB localizations weren't used for type inference, causing a possible type mismatch with the placeholder field defined in the template.
+- [flutter/165166](https://github.com/flutter/flutter/pull/165166) - Update CI configurations and tests to use Xcode 16 and iOS 18 simulator.
+- [flutter/161466](https://github.com/flutter/flutter/pull/161466) - Hot restart can hang on all platforms if "Pause on Unhandled Exceptions" is enabled by the debugger and a call to `compute` or `Isolate.run` has not completed.
+
+### [3.29.2](https://github.com/flutter/flutter/releases/tag/3.29.2)
+
+- [dart 3.7.2 changelog](https://github.com/dart-lang/sdk/blob/stable/CHANGELOG.md#372)
+- [flutter/164958](https://github.com/flutter/flutter/issues/164958) - Impeller, All platforms, Text that is rotated 180 degrees exactly will render as if it is scaled by {-1, 1} instead of {-1, -1}.
+- [flutter/165075](https://github.com/flutter/flutter/pull/165075) - Fixes crashes on Android devices older than API 29 when using Impeller OpenGLES.
+- [flutter/164606](https://github.com/flutter/flutter/issues/164606) Fixes missing glyph error on Android and iOS devices using Impeller.
+- [flutter/164036](https://github.com/flutter/flutter/pull/164036) - On iOS devices Increase number of concurrent background image decode tasks to partially mitigate "Image upload failed due to loss of GPU access" errors.
+- [flutter/163175](https://github.com/flutter/flutter/pull/163175) - Improve performance of CanvasKit rendering for web.
+- [flutter/164628](https://github.com/flutter/flutter/issues/164628) - iOS Fixes crash when allocation of surface for toImage/toImageSync fails.
+- [flutter/164201](https://github.com/flutter/flutter/pull/164201) - Always use Android hardware buffers for platform views when supported.
+- [flutter/162198](https://github.com/flutter/flutter/issues/162198) Fixes double-download of canvaskit.wasm
+- [flutter/164024](https://github.com/flutter/flutter/issues/164024): - Add back an empty io.flutter.app.FlutterApplication for Android apps post v2 embedder migration.
+- [flutter/162198](https://github.com/flutter/flutter/issues/162198) - Fixes double-download of canvaskit.wasm
+- [flutter/164392](https://github.com/flutter/flutter/pull/164392) - All platforms, Fixes a crash that can occur when animating and interacting with a scrollable simultaneously.
+- [flutter/164126](https://github.com/flutter/flutter/pull/164126) - On android use Open GL instead of Vulkan MediaTek Soc.
 
 ### [3.29.1](https://github.com/flutter/flutter/releases/tag/3.29.1)
 
@@ -48,8 +73,6 @@ glyphs.
 - [flutter/163265](https://github.com/flutter/flutter/pull/163265) - disable Vulkan on known bad exynos SoCs.
 - [flutter/163261](https://github.com/flutter/flutter/pull/163261) - Fixes for Impeller DrawVertices issues involving snapshots with empty sizes
 - [flutter/163672](https://github.com/flutter/flutter/pull/163672) - Check for tracked engine.version before overriding
-
-## Flutter 3.29 Changes
 
 ### [3.29.0](https://github.com/flutter/flutter/releases/tag/3.29.0)
 Initial stable release.
